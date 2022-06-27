@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HML5</title>
+</head>
+<body>
+    <h1>Imagem Dinânimica</h1>
+    <p>Tente abrir este site em vários dispositivos diferentes ou simplesmente aumente e diminua otamanho do seu navegador. </p>
+
+    <picture>
+        <source media="(max-width: 700px )" srcset="imagens/foto-p.png" type="image/png">  <!se o tamanho da tela for no máx.1000px, mostrar a foto pequena "P". Se continuar aparecendo a barra de rolagem para ver a imagem completa, aumentar +/- 50px na tolerância (passa para 750px)-->
+        <source media="(max-width: 1000px )" srcset="imagens/foto-m.png" type="image/png"> <!se o tamanho da tela for no máx.1000px, mostrar a foto média "M". Se for maior, vai mostrar a G, que está aqui embaixo configurada como a imagem "oficial". Se continuar aparecendo a barra de rolagem para ver a imagem completa, aumentar +/- 50px na tolerância (passa para 1050px-->
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+        
+        <!obs: necessariasmente nessa ordem: pequeno, médio e grande, sendo a grande o tamanho "original". (mas pode começar com a pequena tbm como "original")-->
+    </picture>
+    
+    <audio preload="metadata" autoplay controls>
+       <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+       <source src="midia/guanacast-33.ogg" type="audio/ogg">
+       <source src="midia/guanacast-33.wav" type="audio/wac">
+       <p>Infelizmente seu navegador não consegue reproduzir áudio. 
+           <a href="midia/guanacast-33.mp3">Clique aqui para baixar o aquivo MP3.</a></p>
+    </audio>
+    
+</body>
+</html>
