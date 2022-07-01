@@ -1,24 +1,43 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Raleway', sans-serif;
+    --fonte3: 'Tangerine', cursive;
+}
+
 * {
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
 }
 
 html, body {
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--fonte1)
 }
 
 header {
     background-color: black;
     color: white;
     text-align: center;
+    font-size: 4vw;
+}
+
+header > p {
+    font-size: 0.7em;
 }
 
 header > h1 {
     padding-top: 50px;
     font-variant: small-caps
+    font-family: var(--fonte2);
+    font-size: 4vw; /*4% da largura da viewport (viewport width). Assim a letra aumenta e diminue conforme o tamanho da tela. É um recurso qd não tá usando Media Query*/
 }
 
 header > p {
@@ -36,16 +55,23 @@ header a:hover, footer a:hover { /*pega links dos dois lugares em uma só conf.,
 }
 
 section {
-    padding-top: 10vh; /*10% da view hight*/
+    padding-top: 10vh; /*vai ocupar 10% da altura da viewport (view hight)*/
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw; /*4% da largura da viewport (viewport width). Assim a letra aumenta e diminue conforme o tamanho da tela. É um recurso qd não tá usando Media Query*/
 }
 
 section.normal {
     background-color: white;
     color: black;
 }
+
+section.normal > p {
+    padding: 10px 0px 10px 20px;
+}
+
 
 section.imagem {
     background-color: rgb(65, 65, 65);
@@ -54,7 +80,9 @@ section.imagem {
 
 section.imagem > p {
     background-color: rgb(105, 105, 105);
-    width: 300px;
+    padding: 20px;
+    display: inline-block; /*cx. acompanha o tamanho do conteúdo*/
+
     
 }
 
