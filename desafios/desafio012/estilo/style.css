@@ -30,7 +30,7 @@ header {
 }
 
 header > p {
-    font-size: 0.7em;
+    font-size: 0.5em;
 }
 
 header > h1 {
@@ -63,6 +63,10 @@ section {
     font-size: 3.5vw; /*4% da largura da viewport (viewport width). Assim a letra aumenta e diminue conforme o tamanho da tela. É um recurso qd não tá usando Media Query*/
 }
 
+section > p {
+    padding-bottom: 10em;
+}
+
 section.normal {
     background-color: white;
     color: black;
@@ -74,16 +78,28 @@ section.normal > p {
 
 
 section.imagem {
-    background-color: rgb(65, 65, 65);
+    background-color: rgba(41, 41, 41, 0.548);
     color: white;
+    box-shadow: inset 6px 6px 15px 0px rgba(0, 0, 0, 0.301);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section.imagem > p {
-    background-color: rgb(105, 105, 105);
+    background-color: rgba(83, 83, 83, 0.61);
     padding: 20px;
-    display: inline-block; /*cx. acompanha o tamanho do conteúdo*/
+    display: inline-block; /*cx. acompanha o tamanho do conteúdo*/  
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.479);
+}
 
-    
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
 }
 
 footer {
@@ -91,4 +107,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    min-height: 3vh;
+    font-size: 3em;
 }
